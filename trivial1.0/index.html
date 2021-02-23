@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trivial 1.0</title>
+</head>
+<style>
+    .btn{
+        margin-top: 200px;
+        margin-left: 45%;
+    }
+    .btn:hover{
+        background-color: burlywood;
+        height: 26px;
+        width: 56px;
+    }
+</style>
+<body>
+    <div>
+        <div class="con" >
+            <button class="btn" onclick="iniciar()">Iniciar</button>
+        </div>
+    </div>
+
+    <script>
+
+        function iniciar() {
+            var acierto = 0;
+            var res = new Array(3);
+            nombre = prompt("Introduce tu nombre");
+
+            var i = 0;
+            while (i < 1) {
+                alert("1)¿Qué es el DOM?")
+                res[i] = parseInt(prompt("1.Ninguna es correcta\n2.Definir objetos de mercado \n3.Documentos Objetivo Marcado\n4.Document Object Model"));
+                if (res[i] == 4) {
+                    acierto++;
+                }
+                alert("2)¿Que es HTML?")
+                res[i] = parseInt(prompt("1. es un lenguaje de estilo \n2.Es un lenguaje de marcado \n3.Todas son correctas\n4.Document Object Model"));
+                if (res[i] == 2) {
+                    acierto++;
+                }
+                alert("3)¿Distancia de la tierra al sol?")
+                res[i] = parseInt(prompt("1.  149,600,000 km\n2. 600,000 km\n3.  9,600,666 km\n4. La misma distancia del sol a la tierra"));
+                if (res[i] == 1 || res[i] == 4) {
+                    acierto++;
+                }
+                i++;
+            }
+
+            alert(nombre + " número de fallos han sido: " + (3 - acierto));
+            alert(nombre + " número de aciertos han sido: " + acierto);
+            switch (acierto) {
+                case 1: alert("Debes mejorar estás flojo en cultura"); break;
+                case 2: alert("Vas mejorando"); break;
+                case 3: alert("Eres el mejor"); break;
+                case 0: alert("Eres un manta"); break;
+            }
+        } 
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivial Lenguaje de marcas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    .tarjeta{
+        margin: auto;
+        margin-top: 20px;
+    }
+    .cuerpo{
+        background-color: black;
+        padding: 20px;
+    }
+    .fecha{
+        background-color:blue;
+        height: 20px;
+        width: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+
+        
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="img/img1.jpg" width="30" height="30"
+                    class="d-inline-block align-top" alt="">
+                Trivial  Acierta las tres preguntas
+            </a>
+        </nav><!-- NAVBAR -->
+        
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active cuerpo">
+                <div class="card tarjeta " style="width: 18rem;">
+                    <img src="img/img1.jpg" class="card-img-top" alt="juego de trivial">
+                    <div class="card-body">
+                        <h5 class="card-title">1)¿Que se entiende como DOM?</h5>
+                        <a href="#" onclick="respuestaF()">a) documental objetivo medico</a><br>
+                        <a href="#" onclick="respuestaF()">b)no lo se</a><br>
+                        <a href="#" onclick="respuestaF()">c)Sigo sin saberlo</a><br>
+                        <a href="#" onclick="respuestaT()">d)Document Object Model</a><br>
+                    </div>
+                    
+                </div>
+                
+              </div><!--fin de tarjeta-->
+              
+              <div class="carousel-item cuerpo">
+                <div class="card tarjeta " style="width: 18rem;">
+                    <img src="img/img1.jpg" class="card-img-top" alt="juego de trivial">
+                    <div class="card-body">
+                        <h5 class="card-title">2)¿Que se entiende como DOM?</h5>
+                        <a href="#" onclick="respuestaF()">a) documental objetivo medico</a><br>
+                        <a href="#" onclick="respuestaF()">b)no lo se</a><br>
+                        <a href="#" onclick="respuestaF()">c)Sigo sin saberlo</a><br>
+                        <a href="#" onclick="respuestaT()">d)Document Object Model</a><br>
+                    </div>
+                    
+                </div>
+              </div><!--fin de tarjeta-->
+
+              <a class="carousel-control-prev fecha" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a id="siguiente" class="carousel-control-next fecha" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div><!--fin contenedor carrusel-->
+            
+            
+          </div>
+
+
+    </div><!--fIN DE CONTENEDOR PRINCIPAL-->
+
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

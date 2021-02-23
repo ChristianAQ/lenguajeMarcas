@@ -1,0 +1,15 @@
+.capa60{
+    height: 60px;
+}
+
+.capa90{
+    height: 90px;
+}
+
+input:valid{
+    background-color: rgb(89, 131, 107);
+}
+
+input:invalid{
+    background-color: rgb(228, 167, 167);
+}

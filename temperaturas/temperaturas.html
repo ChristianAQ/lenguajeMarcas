@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperaturas de una ciudad</title>
+    <style>
+        .container {
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Información de temperaturas</h1>
+        <input type="button" value="Inicio" onclick="datos();" style="background-color: aqua;">
+        <!--<input type="button" value="Calculo de media" onclick="calculoMedia();">-->
+        <input type="button" value="Temperatura mayor" onclick="calculoMayor();">
+        <input type="button" value="Temperatura menor" onclick="calculoMenor();">
+        <br><br>
+        <hr>
+        <input type="button" value="Mostrar todo" onclick="todo();">
+        <br><br>
+        <hr>
+        <label for="">Temperatura en </label>
+        <input type="text" name="r" id="inherente" maxlength="15" size="15" readonly> <br>
+        <br>
+        <label for="">Temperaturas introducidas</label>
+        <input type="text" name="r" id="temperaturas" maxlength="15" size="15" readonly> <br>
+        <br>
+        <label for="">Temperatura media</label>
+        <input type="text" name="r" id="media" maxlength="15" size="15" readonly> <br>
+        <br>
+
+        <br><br>
+        <input type="reset" onclick="reset();">
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

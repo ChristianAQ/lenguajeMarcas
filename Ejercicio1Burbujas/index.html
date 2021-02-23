@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo burbuja en JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="capa60">
+
+    </div>  
+    <center>
+        <h1>Ordenacion de metodo de la Burbuja</h1>
+    </center>
+    <div class="capa60">
+
+    </div>
+    <center>
+        <table border="1px">
+            <tr>
+                <td>
+                    <form id="formulario" method="POST">
+                        <label>A: </label>
+                        <input type="number" name="a" id="a" placeholder="número" min="-10" max="100" maxlength="5" size="5" autofocus required>
+                        <label>B: </label>
+                        <input type="number" name="b" id="b" placeholder="número" min="-10" max="100" maxlength="5" size="5" required>
+                        <label>C: </label>
+                        <input type="number" name="c" id="c" placeholder="número" min="-10" max="100" maxlength="5" size="5" required>
+                        <center>
+                            <br>
+                            <label> Resultado: </label><br>
+                            <input type="text" name="r" id="r" maxlength="15" size="15" readonly> <br>
+                            <br>
+                            <center>
+                                <input type="button" value="Ordenar" id="level10" onclick="alert('Entrar nivel 0'); burbuja();">
+                                <input type="button" value="Saludo" id="saludo" onclick="mensaje();">
+                                <input type="button" value="Pregunta" id="pregunta" onclick="pre();"> 
+                            </center>
+
+                        </center>
+                    </form>
+                </td>
+                <td>
+                    <img src="foto1.png" alt="foto de cosas" border="2px" width="300" height="300">
+                </td>
+            </tr>
+        </table>
+    </center>
+    <div class="capa60">
+    </div> 
+    <center>
+        <div><h3>Resultado ordenado</h3></div>
+        <div id="inherente" aling="center" style="font-size: 18px; font-family: Georgia, 'Times New Roman', Times, serif; color: #097a55;"></div>
+    </center>
+
+</body>
+</html>

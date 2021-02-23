@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+
+<body>
+
+
+    <div class="container" style="border: 10px dashed red; height: 400px; width: 300px;">
+        <div onclick="mover()" id="j" class="player" style="background-color: aqua; transition: all 0.3s; border: 1px solid red;height: 20px; width: 20px; border-radius: 29px;"  ></div>
+    </div>
+
+    <div class="puntos" style="border: 1px dashed red; height: 40px; width: 320px;">
+        <span id="puntos_span"><p>Puntos: 0</p></span>
+    </div>
+    <div class="puntos" style="border: 1px dashed red; height: 40px; width: 320px;">
+        <span id="fallos_span"><p>Fallos: 0</p></span>
+    </div>
+
+    
+
+<script>
+    
+    let puntos=0;
+    let pfallos=0;
+
+    function mover(){    
+        let asd=Math.round(Math.random()*300);
+        let asd2=Math.round(Math.random()*300);
+        document.getElementById("j").style.marginTop =asd+"px";
+        document.getElementById("j").style.marginLeft =asd2+"px";
+        
+        let re=Math.round(Math.random()*4);
+        if(re==2 || re==1){
+            document.getElementById("j").style.height ="50px";
+            document.getElementById("j").style.width ="50px";
+        }else{
+            document.getElementById("j").style.height ="20px";
+            document.getElementById("j").style.width ="20px";
+        }
+        
+    }
+
+    function sumar(){
+        
+        puntos++;
+        document.getElementById("puntos_span").innerHTML="Puntos: "+puntos;
+    }
+
+</script>
+
+</body>
+
+</html>

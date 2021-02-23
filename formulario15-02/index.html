@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1 local Storage </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 90%;
+            margin: 0 auto;
+            background-color: grey;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            color: tomato;
+            font-size: 3em;
+        }
+
+        fieldset {
+            margin: 1em auto;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input:focus,
+        select:focus {
+            background-color: yellow;
+        }
+
+        input:hover,
+        select:hover {
+            background-color: yellow;
+        }
+
+        #boton-crear {
+            font-size: 2em;
+            padding: 0.5em;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .centrado {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Formualio de alta</h1>
+    </header>
+    <form action="index.html" method="post" name="form1" id="form1">
+        <fieldset>
+            <legend>Reguistro</legend>
+            <p><b>Nombre y apellidos</b>
+                <br>
+                <input autofocus id="nameId" type="text" name="nombre" value="" required>
+            </p>
+
+            <p><b>DNI</b>
+                <br>
+                <input id="dniID" type="text" name="dni" value="" size="10" maxlength="9" required>
+            </p>
+
+            <p><label for="correo">Correo Elecetrónico</label>
+                <input type="text" name="correo" value="">
+            </p>
+
+            <p><label for="dia">Fecha de nacimiento</label>
+                <input type="date" name="fecha">
+            </p>
+
+            <p><label for="obsercaviones">Observaciones</label>
+                <textarea name="comentarios" cols="40" rows="10"></textarea>
+            </p>
+        </fieldset>
+        <button onclick="enviar();">Enviar</button>
+    </form>
+
+    <script>
+        
+
+        function enviar() {
+            var nameId = document.getElementById("nameId").value;
+            var dniId = document.getElementById("dniID").value;
+
+            if (dniId=="" || nameId=="") {
+                alert("Ingresa todos los campos");
+
+            } else {
+                localStorage.clear();
+                localStorage.setItem("nombre", document.form1.nombre.value);
+                localStorage.setItem("DNI", document.form1.dni.value);
+                var name = localStorage.getItem("nombre");
+                var dni = localStorage.getItem("DNI");
+
+                var res = confirm("Hola " + name + " ¿Tu dni es correcto?: " + dni);
+
+                if (res === false) {
+                    alert("Ingresa los datos correctos");
+                    localStorage.clear();
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

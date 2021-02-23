@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script>
+        function ordenar(){
+            var num= parseInt(prompt("Cuantos Número quieres introducir: "));
+            while(num<3 || num>5){
+                alert("El número de dígitos a introducir ha de estar entre 3 y 5");
+                num= parseInt(prompt("Cuantos números quieres introducir?: "));
+            }
+            var vector = new Array(num);
+            var i=0;
+
+            while(i<num){
+                vector[i]=parseInt(prompt("Introduzca el número "+(i+1)));
+                i++;
+            }
+
+            document.write(" <center><font size='5' color='blue'>El vector desordenado tiene: ");
+            
+            for(i=0;i<vector.length;i++){
+                document.write(vector[i]);
+                if(i<vector.length-1){
+                    document.write(", ");
+                }
+            }
+
+            document.write("</font><br>");
+            var j=0,k;
+            for(i=1; i<vector.length;i++){
+                for(j=0; j<(vector.length-i);j++){
+                    if(vector[j]>vector[j+1]){
+                        k=vector[j+1];
+                        vector[j+1]=vector[j];
+                        vector[j]=k;
+                    }
+                }
+            }
+
+            document.write("<font size='5' color='orange'> El vector ordenado tiene: ");
+
+            for(i=0; i<vector.length;i++){
+                document.write(vector[i]);
+                if(i<vector.length-1){
+                    document.write(", ");
+                }
+            }
+
+            document.write("</font><br></center>");
+            console.log(vector);
+            alert("El orden seria: "+vector);
+        }
+    </script>
+    <style>
+        input{background-color: aqua;}
+        body{background-color: orange;}
+    </style>
+</head>
+<body>
+    <center>
+        <br>
+        <h1>METODO DE ORDENACION POR BURBUJA</h1>
+        <br>
+        <form name="frmordenar">
+            <input type="button" name="btnordenar" value="ordenar" onclick="ordenar();">
+        </form>
+    </center>
+</body>
+</html>

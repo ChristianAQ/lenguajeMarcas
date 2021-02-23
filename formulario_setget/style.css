@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* documento css3 */
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#contenedor{
+    margin: auto;
+    width: 350px;
+    
+}
+
+#zonaformulario{
+	padding:20px;
+    border: groove 10px red;
+    border-radius: 2em;
+    background-color: rgb(255, 224, 166);
+}
+
+.elemento{
+    width : 150px;
+    margin-left: 10px;
+}
+.botonEnviar, .botonMostrar{
+    width : 65px;
+    margin-left: 10px;
+}

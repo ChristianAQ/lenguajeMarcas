@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguaje de marcas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="envioDato.js"></script>
+</head>
+
+<body>
+    <h1>Formulario de Registro</h1>
+    <div id="contenedor">
+        <section id="zonaformulario">
+            <form method="GET">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Nombre</p>
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Nombre" id="nombre" class="elemento" autofocus>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Fecha de Registro</p>
+                        </td>
+                        <td>
+                            <input type="date" id="fecha" class="elemento">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Email</p>
+                        </td>
+                        <td>
+                            <input type="email" placeholder="Email" id="email" class="elemento">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Password</p>
+                        </td>
+                        <td>
+                            <input type="password" placeholder="Password" id="clave" class="elemento">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Enviar" class="botonEnviar" id="enviar">
+                            <a href="envioDato.html"><input type="button" value="Mostrar" class="botonMostrar" id="mostrar"></a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+
+    </div>
+</body>
+
+</html>

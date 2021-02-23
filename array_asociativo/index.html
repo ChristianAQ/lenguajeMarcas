@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio DAM</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        input {
+            background-color: white;
+        }
+
+        body {
+            background-color: white;
+        }
+    </style>
+
+    <script>
+        function asociativo() {
+            var coche = new Array();
+            coche["color"] = "Azul";
+            coche["marca"] = "Peugeot";
+            coche["modelo"] = "380";
+
+            var coche1 = {
+                "color": "rojo",
+                "marca": "seat",
+                "modelo": "leon"
+            };
+            var coche2 = {
+                "color": "rojo",
+                "CV": 100,
+                "AC": true
+            };
+            var coche3 = {
+                "color": "rojo",
+                "CV": 100,
+                "AC": true
+            };
+            var coche4 = {
+                "color": "rojo",
+                "CV": 100,
+                "AC": true
+            };
+
+
+
+            var coche5 = {
+                "color": "rojo",
+                "CV": 100,
+                "AC": true
+            };
+
+            document.write("clave --- valor");
+            document.write("<br>");
+            document.write("-------------");
+            document.write("<br>");
+
+            for(var item in coche){
+                document.write(i+"---"+coche[item]);
+                document.write("<br>")
+            }
+            document.write("<br>");
+            for(var clave in coche2){
+                document.write(clave+"---"+coche2[clave]);
+                document.write("<br>")
+            }
+            document.write("<br>");
+            for(var clave in coche3){
+                document.write(clave+"---"+coche3[clave]);
+                document.write("<br>")
+            }
+
+            return true;
+        }
+    </script>
+
+
+    <center>
+        <br>
+        <h1> ARRAYS ASOCIATIVOS </h1>
+        <hr>
+        <br>
+        <form name="AgendaF">
+            <input type="button" name="notas" value="AgendaDAM" onclick="asociativo();">
+        </form>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> EJERCICIO DAM </title>
+    <meta charset="uft-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script>
+
+        function agenda() {
+            var clase = [alumnos, asignaturas];
+            var alumnos = ["Ana", "Jose", "Lus", "Paula", "Carmen", "Isa", "Alex"];
+            var asignaturas = ["Geo", "Bio", "Mat", "Tecno", "Eco"];
+            document.write("=".repeat(40));
+            document.write("<br>");
+            var items = [
+                [17, 24],
+                [36, 42],
+                [59, 63]
+            ];
+            document.write(items);
+            document.write("<br>");
+            document.write("Elemento[0][0]=", items[0][0]);
+            document.write("<br>");
+            document.write("=".repeat(40));
+            document.write("<br>");
+            var matriz = [[]];
+            document.write(matriz);
+            var vector1 = ["uno", "dos", "tres"];
+            var vector2 = ["one", "two", "three"];
+            var vector3 = ["Un", "Deux", "Trois"];
+            matriz = [vector1, vector2, vector3];
+            document.write(matriz);
+            document.write("<br>");
+            document.write("=".repeat(40));
+            document.write("<br>");
+            //matriz de 10x3 con valores aleatorios
+            var x = new Array(10);
+            for (var i = 0; i < x.length; i++) {
+                x[i] = new Array(3);
+            }
+            for (var i = 0; i < x.length; i++) {
+                for (var j = 0; j < x[i].length; j++) {
+                    x[i][j] = Math.floor(Math.random() * 90) + 10;
+                }
+            }
+            document.write("<br>");
+            document.write("Matriz " + x.length + "×" + x[0].length + " con valores aleatorios");
+            document.write("<br>");
+            document.write(x);
+
+            return true;
+        }
+    </script>
+
+    <style>
+        input {
+            background-color: white;
+        }
+
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <br>
+        <h1> AGENDA DE DAM1 </h1>
+        <hr>
+        <br>
+        <form name="AgendaF">
+            <input type="button" name="notas" value="AgendaDAM" onclick="agenda();">
+        </form>
+    </center>
+</body>
+
+</html>

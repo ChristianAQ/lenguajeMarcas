@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <center>
+        <h1>Ejercicios3</h1>
+        <h2>Tablas de multiplicar</h2>
+        <fieldset>
+            <button onclick="tabla();">Pulsame</button>
+    </center>
+    <script>
+
+        function tabla() {
+            
+            do{
+                var num = parseInt(prompt("Ingresa número a multiplicar"));
+
+                document.write("<h2>Tabla de multiplicar del " + num + "</h2>");
+                document.write("<ul>");
+
+                for (i = 0; i <= 10; i++) {
+                    document.write("<li>");
+                    document.write(num + " x " + i + " = " + num * i);
+                    document.write("</li>");
+                }
+                document.write("</ul>");
+
+                var res = confirm("Quieres ingresar otro número?");
+            }while(res===true);
+        }
+
+    </script>
+
+    </fieldset>
+
+</body>
+
+</html>

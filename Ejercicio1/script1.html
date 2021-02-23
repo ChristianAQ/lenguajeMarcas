@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Mostrar mensajes complejos</title>
+    <script type="text/javascript">
+
+        var mensajePrincipal ="Hola mundo!\nQue facil es incluir \'comillas simples\' y \"comillas dobles\" ";
+        alert(mensajePrincipal);
+
+
+        function Confirmar(){
+            let mensaje = confirm("¿Te gusta Desarrollar Web? ")
+            if(mensaje){
+                alert("¡Gracias por aceptar!");
+            }else{
+                alert("¡Haz denegado el mensaje!")
+            }
+        }
+
+        function LlamarPromp(){
+            let mascota = prompt("¿Cuál es tu mascota favorita?","");
+            if(mascota !=null){
+                alert("Tu mascota favorita es: "+mascota)
+            }else{
+                alert("No has ingresado una mascota");
+            }
+        }
+
+        function alerta(){
+            let mensaje;
+            let opcion = prompt("Introduzca su nombre: ","placeholder o texto de prueba");
+            if(opcion ==null || opcion==""){
+                mensaje="Has cancelado o introducido el nombre vacio";
+            }else{
+                mensaje = "Hola "+opcion;
+            }
+
+            document.getElementById("ejemplo").innerHTML=mensaje;
+        }
+
+    </script>
+</head>
+<body>
+    <center>
+        <p>Esta página muestra un mensaje complejo</p>
+        <input type="button" value="Mensaje de alerta" onclick="alert('Hola, soy un mensaje de alerta!');">
+        <input type="button" value="Mensaje de confirmacion" onclick="Confirmar();">
+        <input type="button" value="Mensaje personalizado" onclick="LlamarPromp();">
+        
+        <p id="ejemplo">
+            En este parrafo se mostrará la opción clickada por el usuario
+        </p>
+        <button onclick="alerta();">Para mostrar mensaje</button>
+
+        
+
+    </center>
+</body>
+</html>

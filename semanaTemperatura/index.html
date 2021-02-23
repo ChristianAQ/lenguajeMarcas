@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura de la semana</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<style>
+    input {
+        width: 120px;
+    }
+
+    .resultado{
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        
+
+        <div class="pt-5">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Temperatura en:</th>
+                        <th scope="col">Media °C</th>
+                        <th scope="col">Máxima °C</th>
+                        <th scope="col">Mínima °C</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="c1" scope="row">1.</th>
+                        <td><input class="resultado" type="text" name="mediaMadrid" maxlength="15" size="15" id="mediaMadrid" readonly></td>
+                        <td><input class="resultado" type="text" name="maxMadrid" maxlength="15" size="15"id="maxMadrid" readonly></td>
+                        <td><input class="resultado" type="text" name="mimMadrid" maxlength="15" size="15"id="mimMadrid" readonly></td>
+                        <td scope="row"><input type="button" value="Ciudad 1" id="bntMedia" class="btn btn-outline-info"onclick="ciudad_uno();"></td>
+                    </tr>
+                    <tr>
+                        <th id="c2" scope="row">2.</th>
+                        <td><input class="resultado" type="text" name="mediaBarcelona" maxlength="15" size="15"id="mediaBarcelona" readonly></td>
+                        <td><input class="resultado" type="text" name="maxBarcelona" maxlength="15" size="15"id="maxBarcelona" readonly></td>
+                        <td><input class="resultado" type="text" name="minBarcelona" maxlength="15" size="15"id="minBarcelona" readonly></td>
+                        <td scope="row"><input type="button" value="Ciudad 2" id="bntMedia" class="btn btn-outline-info"onclick="ciudad_dos();"></td>
+                    </tr>
+                    <tr class="bg-warning">
+                        <td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Media nacional</th>
+                        <td><input class="resultado" type="text" name="mediaNacional" maxlength="15" size="15"id="mediaNacional" readonly></td>
+                        <td><input class="resultado" type="text" name="maxNacional" maxlength="15" size="15"id="maxNacional" readonly></td>
+                        <td><input class="resultado" type="text" name="minNacional" maxlength="15" size="15"id="minNacional" readonly></td>
+                        <td scope="row"><input type="button" value="Nacional" id="bntMedia" class="btn btn-outline-warning"onclick="nacional();"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table class="table table-hover table-dark">
+                <tbody>
+                    <tr>
+                        <td scope="row"><input style="width: 400px;" type="button" value="Temperaturas" id="btnCalcular_temp" class="btn btn-outline-warning" onclick="bnt_temp();"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Fin de tabla de resultados-->
+
+
+    </div>
+    <!--fin del container-->
+
+    <script src="main.js"></script>
+</body>
+
+</html>
